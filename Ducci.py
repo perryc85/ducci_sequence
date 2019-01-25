@@ -1,17 +1,18 @@
 # https://www.reddit.com/r/dailyprogrammer/comments/8sjcl0/20180620_challenge_364_intermediate_the_ducci/
-# https://github.com/perryc85/ducci_sequence.git
 
-def converting_data_into_lists(numbers):
-	# creating list
-	numbers = numbers.split(',')
+# global list
+lines = []
 
-	# removing unwanted indicies cointaining strings - no mixing data here!
-	numbers.pop(0)
-	numbers.pop(-1)
+def reading_lines(f):
+	for line in f:
+		lines.append(line.strip('\n'))
 
-	return numbers
+	return lines
 
-def function(numbers):
+def writing_to_file(w):
+	pass
+
+def function():
 	pass
 
 # get absolute difference of current value and the one next to it!
@@ -22,11 +23,8 @@ def gettting_absolute_diff():
 # getting input from file
 with open('sequences.txt', 'r') as f:
 
-	# iterate over the entire file turning the data into ints
-	for numbers in f:
-		print(converting_data_into_lists(numbers))
+	# calling and printing method that read files line by line
+	print(reading_lines(f))
 
-
-
-		# int_numbers = int(numbers)
-		# print(numbers)
+with open('sequences.txt', 'w') as fw:
+	pass
